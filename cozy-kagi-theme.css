@@ -389,11 +389,6 @@ color: var(--sand8);
     margin-right: auto;
 }
 
-/* podcast icon */
-.n_ne > svg > path {
-    fill: currentColor;
-}
-
 footer {
     background-color: var(--sand4);
     border-top: 1px solid var(--sand7);
