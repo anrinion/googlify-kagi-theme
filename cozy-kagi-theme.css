@@ -434,6 +434,10 @@ footer {
   color: var(--sand1) !important;
 }
 
+.search-form .search_area {
+  border: none;
+}
+
 /*transitions*/
 .auto_suggestions {
   transition: transform 300ms cubic-bezier(1, 0, 0, 1);
