@@ -488,6 +488,15 @@ body {
     color: var(--primary-300);
 }
 
+#quickPeekResults summary {
+    font-size: 16px;
+}
+
+#quickPeekResults .inlineHeader i,.inlineHeader i svg {
+    height: 0px;
+    width: 0px
+}
+
 /* layout adjustments */
 
 .sri-group .sr-group {
