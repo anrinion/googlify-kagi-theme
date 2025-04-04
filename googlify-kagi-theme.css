@@ -317,7 +317,9 @@ body {
 .__sri_more_menu._0_k_ui_dropdown .k_ui_dropdown_first_item i {
     color: var(--primary-300);
 }
-
+a {
+    text-decoration: none !important;
+}
 @media screen and (min-width: 1300px) {
     .right-content-box {
         padding-left: 40px;
