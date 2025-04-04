@@ -32,7 +32,7 @@
 
     --related-item-bg: var(--light-gray);
 
-    --search-result-gap: 40px;
+    --search-result-gap: 30px;
     --m_sri_gap_color: var(--background-color);
 }
 
@@ -88,12 +88,6 @@
     transition: transform 0.4s ease-in-out;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.58;
-}
-
 #help_modal .section-title,
 .btn.--lg,
 .button-primary,
@@ -141,10 +135,10 @@ body {
 .search-form .search-input-container {
     border: 1px solid var(--gray);
     background-color: var(--white);
-    border-radius: 16px;
     min-height: 46px;
     height: 46px;
     transition: box-shadow 150ms;
+    box-shadow: 1px 8px 30px 0 rgba(0,0,0,.09);
 }
 
 .search-form .search_area {
@@ -306,49 +300,10 @@ div.main-content:not(.app-nav, .top-panel-box) a:visited {
     background-color: var(--light-gray);
 }
 
-/* quick settings */
-.quick-settings {
-    position: fixed;
-    transform: translateX(100%);
-    transition: transform 0.15s ease-in-out;
-    top: 0;
-    right: 0;
-    max-width: 450px;
-    height: 100%;
-    z-index: 102;
-    background-color: var(--white);
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid var(--gray);
-    overflow: auto;
-}
-
-.quick-settings-region__dropdown {
-    width: 100%;
-    display: block;
-    background-color: var(--light-gray);
-    border-radius: 5px;
-}
-
-.quick-settings-region__dropdown:hover {
-    background-color: var(--light-blue);
-}
-
 .dropdown.dd-b .dd-list,
 .dropdown.dd-b .dd-toggle-label,
 .dropdown.dd-b .dd-toggle-label:before {
     border: 1px solid var(--gray);
-}
-
-.quick-settings-region__dropdown .dd-list {
-    background-color: var(--white) !important;
-    color: var(--black) !important;
-}
-
-.quick-settings-region__dropdown .dd-list li.--hover,
-.quick-settings-region__dropdown .dd-list li:hover {
-    background-color: var(--light-blue) !important;
-    color: var(--black) !important;
 }
 
 .dropdown .dd-list input[type="search"] {
@@ -369,11 +324,13 @@ div.main-content:not(.app-nav, .top-panel-box) a:visited {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    color: var(--black);
-    background-color: var(--light-gray);
     border-radius: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 5px;
+    color: var(--dark-gray);
+}
+
+#menu-advanced-search-toggle {
+    color: var(--dark-gray);
 }
 
 #mm-image .custom-date-range .input label input {
@@ -484,4 +441,90 @@ header.app-header {
     border-radius: 50% !important;
     margin-right: 8px !important;
     object-fit: contain !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* text adjustments */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.__sri-title .__sri_title_link {
+    font-size: 20px;
+}
+
+.__srgi-title a {
+    font-size: 16px;
+}
+
+.__sri-url {
+    color: var(--search-result-url-link) !important;
+    font-size: 12px;
+    line-height: 1.5rem;
+}
+
+.__sri-desc {
+    color: var(--search-result-content-text);
+    font-size: 14px;
+    line-height: 22px;
+    overflow: hidden
+}
+
+
+._0_rank-icons:hover svg {
+    color: var(--primary);
+}
+._0_rank-icons svg {
+    color: var(--primary-300);
+}
+
+.__sri_more_menu._0_k_ui_dropdown:hover .k_ui_dropdown_first_item i {
+    color: var(--primary);
+}
+
+.__sri_more_menu._0_k_ui_dropdown .k_ui_dropdown_first_item i {
+    color: var(--primary-300);
+}
+
+/* layout adjustments */
+
+.sri-group .sr-group {
+    margin-top: 10px;
+    padding-left: 50px;
+}
+
+@media screen and (min-width: 1300px) {
+    .right-content-box {
+        padding-left:40px
+    }
+
+    :root {
+        --app_content_padding: 220px
+    }
+}
+
+
+.search-form {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1270px) {
+    .app-logo.--kagi {
+        top: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .app-header .center-content-box {
+        width: 900px;
+    }
+}
+
+@media screen and (min-width: 1270px) {
+    .app-logo {
+        transform: translateX(calc(-100% - 50px));
+    }
 }
